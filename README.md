@@ -36,5 +36,5 @@ The dataset used for this project is sourced from [Roboflow](https://roboflow.co
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/suhanisuha/yolov10_kidneystone.git
+   git clone https://github.com/suhanisuha/yolov10_finetune.git
    cd yolov10_kidneystone
