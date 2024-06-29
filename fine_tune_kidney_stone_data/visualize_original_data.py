@@ -7,9 +7,9 @@ import random
 
 
 if __name__=='__main__':
-    root_path = ""  ## Working Directory
+    root_path = "" ## Working Directory
 
-    data_path = "yolov10_kidneystone/fine_tune_kidney_stone_data/kidney_stone_data_roboflow/train"
+    data_path = "yolov10_finetune/fine_tune_kidney_stone_data/kidney_stone_data_roboflow/train"
     imgage_list = glob.glob(os.path.join(root_path,data_path,"images","*.jpg"))
 
     fig, ax = plt.subplots(1,5,sharex=True,sharey=True)

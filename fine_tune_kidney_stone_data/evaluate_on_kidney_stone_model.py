@@ -9,17 +9,17 @@ if __name__=="__main__":
 
     root_path = "" ## Working Directory
 
-    data_path = "yolov10_kidneystone/fine_tune_kidney_stone_data/kidney_stone_data_roboflow/test"
+    data_path = "yolov10_finetune/fine_tune_kidney_stone_data/kidney_stone_data_roboflow/test"
     imgage_list = glob.glob(os.path.join(root_path,data_path,"images","*.jpg"))
 
-    checkpoint_path = os.path.join(root_path, "yolov10_kidneystone/fine_tuned_checkpoints/best.pt")
+    checkpoint_path = os.path.join(root_path, "yolov10_finetune/fine_tune_kidney_stone_data/fine_tuned_checkpoints/best.pt")
     print('Loading Model')
     model = YOLOv10(checkpoint_path)
     print('Finish Loading Model')
 
     import matplotlib.pyplot as plt
     fig,ax = plt.subplots(2,5,sharex=True,sharey=True)
-    for i in range(6):
+    for i in range(5):
         image_path = imgage_list[random.randint(0, len(imgage_list))]
 
         image = cv2.imread(image_path)

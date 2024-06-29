@@ -5,10 +5,10 @@ import os
 if __name__=='__main__':
     root_path = "" # deinfe your working directory path
 
-    img_path = os.path.join(root_path ,"yolov10_kidneystone/fine_tune_kidney_stone_data/images/Bhawarth_in_Hall.png")
-    img_path = os.path.join(root_path ,"yolov10_kidneystone/fine_tune_kidney_stone_data/images/Modi_with_Gary.png")
+    img_path = os.path.join(root_path ,"yolov10_finetune/fine_tune_kidney_stone_data/images/Bhawarth_in_Hall.png")
+    img_path = os.path.join(root_path ,"yolov10_finetune/fine_tune_kidney_stone_data/images/Modi_with_Gary.png")
 
-    pretrained_checkpoint_path = os.path.join(root_path , "yolov10_kidneystone/fine_tune_kidney_stone_data/pretrained_checkpoints/yolov10m.pt")
+    pretrained_checkpoint_path = os.path.join(root_path , "yolov10_finetune/fine_tune_kidney_stone_data/pretrained_checkpoints/yolov10m.pt")
     model = YOLOv10(pretrained_checkpoint_path)
     print('Finish Loading Model')
 
