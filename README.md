@@ -1,6 +1,6 @@
 # YOLOv10 Fine-Tuning for Kidney Stone Detection
 
-This project focuses on fine-tuning the YOLOv10 model for the custom object detection of kidney stones. Leveraging a dataset sourced from Roboflow, this repository provides a comprehensive setup for training and deploying a YOLOv10 model specifically for medical imaging applications.
+This project focuses on fine-tuning the YOLOv10 model for the custom object detection of kidney stones. Leveraging a dataset sourced from Roboflow, this repository provides a setup for training YOLOv10 model for custom dataset (Ex : Kideny stone detection for medical imaging applications) .
 
 ## Table of Contents
 
