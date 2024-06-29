@@ -1,51 +1,19 @@
-
 import cv2
 import matplotlib.pyplot as plt
-import matplotlib.patches as patches
+from fine_tune_kidney_stone_data.helper_functions import get_ground_truth_rect_list
 import glob
 import os
 import random
 
 
-
-
-def get_ground_truth_rect_list(label_path,img_shape):
-
-    with open(label_path, 'r') as file:
-        labels = file.readlines()
-
-    image_height, image_width, _ = img_shape
-
-    rect_list = []
-    for label in labels:
-        class_id, x_center, y_center, width, height = map(float, label.strip().split())
-        class_name = ''
-
-        # Convert YOLO format to bounding box coordinates
-        x_center *= image_width
-        y_center *= image_height
-        width *= image_width
-        height *= image_height
-
-        x_min = x_center - width / 2
-        y_min = y_center - height / 2
-
-        # Create a Rectangle patch
-        rect = patches.Rectangle((x_min, y_min), width, height, linewidth=1, edgecolor='g', facecolor='none')
-        rect_list.append(rect)
-
-    return rect_list
-
-
-
-
 if __name__=='__main__':
-    root_path = ""
-    data_path = "yolov10_kidneystone/kidney_stone_data_roboflow/test"
+    root_path = ""  ## Working Directory
+
+    data_path = "yolov10_kidneystone/fine_tune_kidney_stone_data/kidney_stone_data_roboflow/train"
     imgage_list = glob.glob(os.path.join(root_path,data_path,"images","*.jpg"))
 
-    fig, ax = plt.subplots(1,4)
-    for i in range(4):
+    fig, ax = plt.subplots(1,5,sharex=True,sharey=True)
+    for i in range(5):
         image_path = imgage_list[random.randint(0, len(imgage_list))]
 
         image = cv2.imread(image_path)
